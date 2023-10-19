@@ -122,6 +122,7 @@ void run_cmd(char *cmd_str) {
           perror("Fork failed");
           exit(1);
         } else if (child_pid == 0) {
+          // forked process
           char *arguments[arg_len + 2];
 
           strcat(path, "/");
